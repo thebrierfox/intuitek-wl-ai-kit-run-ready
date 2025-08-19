@@ -1,0 +1,10 @@
+# Conflict policies for modules
+policies:
+  exclusive_groups:
+    # list of exclusive module sets
+    - ids: []
+  soft_conflicts:
+    - modules:
+        - self_refine
+        - majority_vote
+      resolution: refine_then_vote
