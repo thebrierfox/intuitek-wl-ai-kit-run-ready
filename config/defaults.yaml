@@ -1,0 +1,12 @@
+# Default module profiles
+profiles:
+  chat_safe:
+    modules:
+      - self_refine
+      - chain_of_verification_micro
+  chat_rigorous:
+    modules:
+      - self_refine
+      - majority_vote
+      - chain_of_verification_micro
+      - resource_impact_estimator
