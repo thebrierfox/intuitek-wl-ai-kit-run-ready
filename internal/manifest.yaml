@@ -1,0 +1,25 @@
+modules:
+  - id: self_refine
+    category: reasoning
+    reason: "Iteratively refine responses to improve quality."
+    entry_point: internal.code.self_refine:run_module
+    prompt_trigger: self refine
+    trace_label: self_refine
+  - id: majority_vote
+    category: verification
+    reason: "Combine multiple outputs and select the majority answer."
+    entry_point: internal.code.majority_vote:run_module
+    prompt_trigger: majority vote
+    trace_label: majority_vote
+  - id: chain_of_verification_micro
+    category: verification
+    reason: "Perform micro chain-of-verification to enhance correctness."
+    entry_point: internal.code.chain_of_verification_micro:run_module
+    prompt_trigger: chain of verification micro
+    trace_label: chain_of_verification_micro
+  - id: resource_impact_estimator
+    category: estimation
+    reason: "Estimate computational resources and carbon impact."
+    entry_point: internal.code.resource_impact_estimator:run_module
+    prompt_trigger: resource impact estimator
+    trace_label: resource_impact_estimator
